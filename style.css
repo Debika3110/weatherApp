@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: azure;
+    background: linear-gradient(0deg, rgba(188, 221, 251, 1) 0%, rgba(55, 106, 224, 1) 61%, rgba(5, 54, 197, 1) 100%);
+}
+
+/* Tabs and Headings */
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 25px;
+}
+
+.tab-container {
+    max-width: 550px;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    font-weight: 600;
+}
+
+.tab.current-tab {
+    background-color: rgba(230, 229, 229, 0.588);
+    border-radius: 4px;
+}
+
+/* Weather Container */
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem;
+}
+
+/* Button Styles */
+.btn {
+    border: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: rgb(82, 102, 253);
+    color: azure;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Grant Location Container */
+.grant-location-container {
+    display: none;
+}
+
+.grant-location-container.active {
+    display: flex;
+}
+
+.grant-location-container img {
+    margin-bottom: 2rem;
+}
+
+.grant-location-container p:first-of-type {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container p:last-of-type {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+/* Loading Screen */
+.loading-container {
+    display: none;
+}
+
+.loading-container.active {
+    display: flex;
+}
+
+.loading-container p {
+    text-transform: uppercase;
+}
+
+/* User Info Container */
+.user-info-container {
+    display: none; /* Initially hidden */
+}
+
+.user-info-container.active {
+    display: flex; /* Show on active class */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.user-info-container .name p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.user-info-container .name img {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.user-info-container p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.user-info-container img {
+    width: 70px;
+    height: 70px;
+    border: none;
+}
+
+.user-info-container p[data-temp] {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Weather Parameters */
+.parameter-container {
+    display: flex;
+    gap: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.parameter {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px 0;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* Form Container */
+.form-container {
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+.form-container.active {
+    display: flex; /* Use .active class */
+}
+
+.form-container input {
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(208, 206, 206, 0.466);
+    border-radius: 10px;
+    border: none;
+}
+
+.form-container input::placeholder {
+    color: azure;
+}
+
+.form-container input:focus {
+    outline: 2px solid whitesmoke;
+}
+
+.form-container .btn {
+    padding: unset;
+    background-color: transparent;
+}
